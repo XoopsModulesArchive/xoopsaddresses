@@ -1,0 +1,80 @@
+
+<table width='100%' cellspacing='1' cellpadding='2' class="outer">
+  <tr> 
+    <td class="even" align='left' colspan="2"><a href='javascript:history.back(1)'><b><{$lang_previous}></b></a></td>
+  </tr>
+  <tr> 
+    <td class="head" align='left' colspan="2"><{$link.adminlink}> <b><{$link.title}></b></td>
+  </tr>
+  <tr> 
+    <td class="even" align='left' width="16%"><b><{$lang_adress}>:</b> </td>
+    <td class="odd" align='left' width="84%"><{$link.adress}></td>
+  </tr>
+  <tr> 
+    <td class="even" align='left' width="16%"><b><{$lang_zip}>:</b> </td>
+    <td class="odd" align='left' width="84%"><{$link.zip}></td>
+  </tr>
+  <tr> 
+    <td class="even" align='left' width="16%"><b><{$lang_city}>:</b> </td>
+    <td class="odd" align='left' width="84%"><{$link.city}></td>
+  </tr>
+  <{if $link.country != ""}> 
+  <tr> 
+    <td class="even" align='left' width="16%"><b><{$lang_country}>:</b> </td>
+    <td class="odd" align='left' width="84%"><{$link.country}></td>
+  </tr>
+  <{/if}> <{if $link.phone != ""}>
+  <tr> 
+    <td class="even" align='left' width="16%"><b><{$lang_phone}>:</b> </td>
+    <td class="odd" align='left' width="84%"><{$link.phone}></td>
+  </tr>
+  <{/if}> <{if $link.mobile != ""}>
+  <tr> 
+    <td class="even" align='left' width="16%"><b><{$lang_mobile}>:</b> </td>
+    <td class="odd" align='left' width="84%"><{$link.mobile}></td>
+  </tr>
+  <{/if}> <{if $link.fax != ""}> 
+  <tr> 
+    <td class="even" align='left' width="16%"><b><{$lang_fax}>:</b> </td>
+    <td class="odd" align='left' width="84%"><{$link.fax}></td>
+  </tr>
+<{/if}> <{if $link.contemail != ""}> 
+  <tr> 
+    <td class="even" align='left' width="16%"><b><{$lang_contemail}>:</b> </td>
+    <td class="odd" align='left' width="84%"><a href="mailto:<{$link.contemail}>"><{$link.contemail}></a></td>
+  </tr>
+  <{/if}> <{if $link.url != ""}> 
+  <tr> 
+    <td class="even" align='left' width="16%"><b><{$lang_website}>:</b> </td>
+    <td class="odd" align='left' width="84%"><a href="<{$link.url}>" target="_blank"><{$link.url}></a></td>
+  </tr>
+  <{/if}> <{if $link.opentime != ""}> 
+  <tr> 
+    <td class="even" align='left' width="16%"><b><{$lang_opened}>:</b> </td>
+    <td class="odd" align='left' width="84%"><{$link.opentime}></td>
+  </tr>
+  <{/if}> 
+  <tr valign="top"> 
+    <td class="even" align='left'><b><{$lang_description}></b> </td>
+    <td class="odd" align='left'><{$link.description}></td>
+  </tr>
+  <{if $link.logourl != ""}>
+  <tr> 
+    <td class="odd" align='center' colspan="2">
+	    <img src="<{$xoops_url}>/modules/addresses/images/shots/<{$link.logourl}>" align="center" vspace="3" hspace="3" border="0">
+	 </td>
+  </tr>
+  <{/if}>
+  <tr> 
+    <td class="even" align='left' colspan="2"><a href='javascript:history.back(1)'><b><{$lang_previous}></b></a></td>
+  </tr>
+   <tr> 
+    <td class="head" align='center' colspan="2"><a href="<{$xoops_url}>/modules/addresses/ratelink.php?cid=<{$link.cid}>&amp;lid=<{$link.id}>"><{$lang_ratethissite}></a> 
+      | <a href="<{$xoops_url}>/modules/addresses/modlink.php?lid=<{$link.id}>"><{$lang_modify}></a> 
+      <{if $link.url != ""}> |<a href="<{$xoops_url}>/modules/addresses/brokenlink.php?lid=<{$link.id}>"><{$lang_reportbroken}></a> <{/if}>
+      | <a target="_top" href="mailto:?subject=<{$link.mail_subject}>&amp;body=<{$link.mail_body}>"><{$lang_tellafriend}></a> 
+      | <a href="<{$xoops_url}>/modules/addresses/singlelink.php?cid=<{$link.cid}>&amp;lid=<{$link.id}>"><{$lang_comments}> 
+      (<{$link.comments}>)</a> | <a href="<{$xoops_url}>/modules/addresses/print.php?lid=<{$link.id}>" target="_blank"><{$lang_print}></a></td>
+  </tr>
+</table>
+<br>
